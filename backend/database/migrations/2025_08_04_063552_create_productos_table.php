@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre_producto',100);
+            $table->string('precio');
+            $table->foreignId('marca_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
