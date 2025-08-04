@@ -24,7 +24,7 @@ class ProductoController extends Controller
     {
         //
         $request->validate([
-            'nombre_producto' => 'required|string|max:100',
+            'nombre_producto' => 'required|string|max:150',
             'precio' => 'required|string',
             'marca_id' => 'required|exists:marcas,id',
         ]);
@@ -65,7 +65,7 @@ class ProductoController extends Controller
         }
 
         $request->validate([
-            'nombre_producto' => 'required|string|max:100',
+            'nombre_producto' => 'required|string|max:150',
             'precio' => 'required|string',
             'marca_id' => 'required|exists:marcas,id',
         ]);
